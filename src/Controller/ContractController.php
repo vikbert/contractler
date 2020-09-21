@@ -10,9 +10,10 @@ class ContractController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index (): Response
+    public function index(): Response
     {
-        return new Response('it works');
+        return $this->render('contract/index.html.twig', [
+            'msg' => 'world!'
+        ]);
     }
 }
-
